@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    background-color: #303030;
+    color: #E5E5E5;
+    --cor-hover-list: #42FED0;
+    --cor-menu-lateral:#0C141C;
+    --cor-primeiro-item-list:#FE4554;
+    --font-logo: 'VALORANT', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;               
+}
+
+.cabecalho{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+}
+
+.cabecalho .menu-nav{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.cabecalho .menu-nav div{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu-nav div .menu-top-right{
+    display: flex;
+    list-style: none;
+}
+
+.cabecalho .menu-nav div .menu-top-right li{
+    padding: 0.3rem;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.cabecalho .menu-nav .logo img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.main-content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-content .fundo-intro{
+    display: fixed;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.main-content .page-content{
+
+}
+
+.main-content .page-content .menu-left{
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    list-style-type:square;
+    gap: 1rem;
+}
+
+.main-content .page-content .menu-left li span{
+    transition: color .1s;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+}
+.main-content .page-content .menu-left li:first-child{
+    color: var(--cor-primeiro-item-list);
+    font-size: 3rem;
+    margin-left: 1rem;
+
+}
+
+.main-content .page-content .menu-left li:hover{
+    color: var(--cor-hover-list);
+}
