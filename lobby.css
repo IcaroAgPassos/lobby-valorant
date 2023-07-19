@@ -103,13 +103,15 @@ html, body{
 }
 
 .main-content .fundo-intro{
-    display: fixed;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
 .main-content .page-content .menu-left{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     text-transform: uppercase;
     font-size: 3rem;
     display: flex;
