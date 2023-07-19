@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+@font-face {
+    font-family: Tungsten;
+    src: url(fonte.ttf)
+}
+
 :root{
     background-color: #303030;
     --cor-hover-list: #42FED0;
     --cor-menu-lateral:#0C141C;
     --cor-primeiro-item-list:#FE4554;
-    --font-logo: 'VALORANT', sans-serif;
+    font-family: 'Tungsten', sans-serif;
 }
 
 *{
@@ -16,12 +21,17 @@
     color: #E5E5E5;      
 }
 
+html, body{
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+}
+
 .cabecalho{
     width: 100%;
     position: fixed;
     display: flex;
     justify-content: center;
-    font-family: 'Anton', sans-serif;
 }
 
 .cabecalho .menu-nav{
@@ -52,7 +62,7 @@
 .cabecalho .menu-nav div span i{
     margin: 0;
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: .5rem;
     cursor: pointer;
     transition: transform .3s;
@@ -101,22 +111,21 @@
 
 .main-content .page-content .menu-left{
     text-transform: uppercase;
-    font-size: 1.9rem;
+    font-size: 3rem;
     display: flex;
     flex-direction: column;
     margin-left: 4rem;
     list-style-type:square;
-    gap: 1rem;
+    gap: .5rem;
 }
 
-.main-content .page-content .menu-left i{
-    font-size: 1rem;
+.main-content .page-content .menu-left span i{
+    font-size: 3rem;
 }
 
 .main-content .page-content .menu-left span{
     transition: color .1s;
     cursor: pointer;
-    font-family: 'Anton', sans-serif;
     transition: all .3s;
     display: flex;
     justify-content: flex-start;
@@ -129,19 +138,25 @@
 }
 .main-content .page-content .menu-left span .first-item{
     color: var(--cor-primeiro-item-list);
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .main-content .page-content .menu-left span i{
     font-size: .5rem;
     color: white;
     transform: rotate(45deg);
+    transition: all .2s;
 }
 
-.main-content .page-content .menu-left span a:hover{
+.main-content .page-content .menu-left span:hover a{
     color: var(--cor-hover-list);
 }
 
-.main-content .page-content .menu-left span a:hover{
+.main-content .page-content .menu-left span:hover a{
     transform: translateX(.8rem);
 }   
+
+.main-content .page-content .menu-left span:hover i{
+    transform: rotate(225deg) scale(1.7);
+    color: var(--cor-hover-list);
+}
