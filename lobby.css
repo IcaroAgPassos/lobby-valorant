@@ -183,7 +183,7 @@ html, body{
     transition: opacity .1s;
 }
 
-.menu-right:hover .btn-open-menu-right{
+.menu-right:hover + .btn-open-menu-right{
     opacity: 1;
 }
 
