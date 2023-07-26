@@ -6,8 +6,9 @@
     <title>Lobby Valorant</title>
     <link rel="stylesheet" href="lobby.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
+<body id="corpo">
     <header class="cabecalho">
         <nav class="menu-nav">
             <figure class="logo-left"><img src="https://static.vecteezy.com/system/resources/previews/019/763/186/original/valorant-logo-transparent-free-png.png" alt="logo">VALORANT</figure>
@@ -35,18 +36,47 @@
                 <li class="list-menu"><i class="fa-sharp fa-solid fa-square"></i> <a href="">agentes</a></li>
                 <li class="list-menu"><i class="fa-sharp fa-solid fa-square"></i> <a href="">loja</a></li>
             </ul>
-            <div class="menu-right">
+            <div class="menu-right" id="menuRight">
                 <ul class="list-menu-right">
-                    <li class="perfil-icon"><figure><img src="https://img.quizur.com/f/img6012b28b2306b2.31206975.jpg?lastEdited=1611838095" alt=""><i class="fa-solid fa-circle icon-online-circle"></i></figure></li>
-                    <li class="number-players">0</li>
-                    <li class="number-players">3</li>
-                    <li class="perfil-icon"><figure><img src="https://i.pinimg.com/236x/db/31/5a/db315a6647c7f14efb3064e5e286e2a2.jpg" alt=""></figure><i class="fa-solid fa-circle icon-online-circle"></i></li>
-                    <li class="perfil-icon"><figure><img src="https://i.pinimg.com/236x/db/31/5a/db315a6647c7f14efb3064e5e286e2a2.jpg" alt=""></figure><i class="fa-solid fa-circle icon-online-circle"></i></li>
-                    <li class="perfil-icon"><figure><img src="https://i.pinimg.com/236x/db/31/5a/db315a6647c7f14efb3064e5e286e2a2.jpg" alt=""></figure><i class="fa-solid fa-circle icon-online-circle"></i></li>
-                    <li class="number-players">78</li>
+                    <li class="block-list">
+                        <img src="https://pbs.twimg.com/media/FCgBgQzXoA0GqeM.jpg" alt="" class="perfil-icon">
+                        <p class="perfil-name">I AM YOKI</p>
+                    </li>
+                    <li class="block-list drop-box">
+                        <p class="drop-number">1</p>
+                        <p class="drop-name">conectado(a)</p>
+                    </li>
+                    <li class="block-list">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="" class="perfil-icon">
+                        <p class="perfil-name">Pafly</p>
+                    </li>
+                    <li class="block-list drop-box">
+                        <p class="drop-number">4</p>
+                        <p class="drop-name">outros jogos</p>
+                    </li>
+                    <li class="block-list">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="" class="perfil-icon">
+                        <p class="perfil-name">CRis</p>
+                    </li>
+                    <li class="block-list">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="" class="perfil-icon">
+                        <p class="perfil-name">Kristofferson</p>
+                    </li>
+                    <li class="block-list">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="" class="perfil-icon">
+                        <p class="perfil-name">Deadeye</p>
+                    </li>
+                    <li class="block-list">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="" class="perfil-icon">
+                        <p class="perfil-name">lpaiv</p>
+                    </li>
+                    <li class="block-list drop-box">
+                        <p class="drop-number">76</p>
+                        <p class="drop-name">desconectado(a)</p>
+                    </li>
                 </ul>
             </div>
-            <i class="fa-solid fa-chevron-left btn-open-menu-right"></i>
+            <i class="fa-solid fa-chevron-left btn-open-menu-right" id="btnMenu"></i>
         </section>
     </main>
 </body>
