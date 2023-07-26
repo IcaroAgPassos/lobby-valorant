@@ -11,6 +11,8 @@ function closeMenu(){
 const menuClick = document.getElementById('menuRight');
 menuClick.addEventListener('click', openMenu);
 
+// PRECISO ENTENDER COMO ISSO AQUI ABAIXO FUNCIONOU DEPOIS KKKKKKKKKKKKK 
+
 document.addEventListener('click', function(event){
     const corpoClick = document.getElementById('menuRight');
     const isOpenMenu = corpoClick.contains(event.target);
