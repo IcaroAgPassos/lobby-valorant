@@ -25,6 +25,7 @@
     --em-jogo-color:#54A3DA;
     --fundo-menu-options:#1F2025;
     --block-menu-options:#525256;
+    --block-panel-fundo: linear-gradient(137deg, rgba(48,72,71,1) 52%, rgba(30,45,46,1) 99%);
     font-family: 'Tungsten', sans-serif;
 }
 
@@ -182,8 +183,8 @@ html, body{
 
 .main-content .page-content .menu-right{
     position: absolute;
-    right: -9.8rem;
-    top: 2.9rem;
+    right: -10.1rem;
+    top: 2.8rem;
     height: 100%;
     width: 13rem;
     background-color: #0C141C80;
@@ -226,24 +227,30 @@ html, body{
 }
 
 .perfil-icon{
-    width: 2.8rem;
+    width: 2.35rem;
     object-fit: cover;
     box-sizing: content-box;
-    padding: .3rem;
+    padding: .2rem;
 }
 
 .perfil-name{
     font-size: .8rem;
     font-weight: 500;
+    margin-left: .7rem;
 }
 
 .perfil-name::before{
     position: absolute;
     content: ' \25CF';
-    font-size: 1.3rem;
+    font-size: 1rem;
     z-index: 5;
     color: var(--online-color);
-    transform: translateX(-.8rem) translateY(.3rem);
+    transform: translateX(-1.2rem) translateY(.3rem);
+    text-shadow: 
+             -1px -1px 0px #FFF, 
+             -1px 1px 0px #FFF,                    
+              1px -1px 0px #FFF,                  
+              1px 1px 0px #FFF;
 }
 
 .drop-name{
@@ -257,7 +264,7 @@ html, body{
     text-align: center;
     text-transform: uppercase;
     width: 2.8rem;
-    padding: .2rem;
+    padding: .1rem;
     box-sizing: content-box;
 }
 
@@ -299,17 +306,22 @@ html, body{
     background-color: #52525680;
     width: 3rem;
     height: 3rem;
+    transition: width .3s, height .3s, font-size .3s;
 }
+
+.section-options .menu-options .btn-exit-menu:hover{
+    font-size: 3.3rem;
+}
+
 
 .section-options .menu-options{
     font-family: 'InriaSans Light', sans-serif;
-    text-transform: uppercase;
     font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     background-color: var(--fundo-menu-options);
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: .1rem solid white;
+    border-bottom: .1rem solid white;
     gap: .2rem;
     width: 30rem;
     height: 25rem;
@@ -321,20 +333,29 @@ html, body{
 }
 
 .menu-options .block-menu-options{
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     width: 20rem;
-    height: 3rem;
+    background: none;
     background-color: var(--block-menu-options);
+    border: .18rem solid #7D7D80;
+    font-family: 'InriaSans Light', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;    height: 3rem;
     border: .18rem solid #7D7D80;
     padding: 1rem;
     box-sizing: border-box;
+    transition: border .2s;
 }
 
-.section-options .menu-options .list-menu-options:nth-child(5){
-    margin-top: 3rem;
+.menu-options .block-menu-options:hover{
+    border: .20rem solid #EAEEB2;
+}
+
+.section-options .menu-options .list-menu-options .arrow-menu{
+    padding: 1rem 0 1rem 0;
+    font-size: 1.5rem;
 }
 
 .list-menu-options .exit-block{
@@ -345,8 +366,133 @@ html, body{
 .version-options p{
     letter-spacing: 1px;
     font-size: .6rem;
-    color: #878686;
+    color: #909090;
 }
+
+.main-content .section-panel{
+    position: absolute;
+    z-index: -1;
+    top: 7.2rem;
+    right: 5rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    font-family: 'InriaSans Light', sans-serif;
+}
+
+.section-panel .highlights, .section-panel .slider{
+    width: 100%;
+    overflow: hidden;
+    transition: transform .2s;
+    cursor: pointer;
+    border: 1px solid #D6BAB5;
+
+}
+
+.section-panel .highlights{
+    height: 20rem;
+}
+
+.section-panel .slider{
+    height: 10rem;
+}
+
+.section-panel .highlights img, .section-panel .slider img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-panel .highlights:hover, .section-panel .slider:hover{
+    transform: scale(1.01);
+}
+
+.section-panel .block-panel{
+    font-family: 'InriaSans Light', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 3rem;
+    border: .18rem solid #7D7D80;
+    box-sizing: border-box;
+    transition: border .2s;
+    background: var(--block-panel-fundo);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-panel .block-panel .block-text{
+    font-size: 1.27rem;
+    padding: 0;
+    top: 0;
+    margin-top: .2rem;
+}
+
+.section-panel .block-panel .version-panel{
+    font-size: .7rem;
+    width: 15rem;
+    text-align: center;
+    background-color: #73767B;
+}
+
+.block-highlights-mode{
+    width: 100%;
+    height: 4rem;
+    background-color: #0E101250;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    border-top: .1rem solid #ffffff80;
+    border-bottom: .1rem solid #ffffff80;
+
+}
+
+.block-highlights-mode .title-mode{
+    background-color: #0E101280;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: .7rem;
+    padding: .2rem;
+}
+
+.block-highlights-mode .block-mode{
+    display: flex;
+    margin-top: .3rem;
+    flex-direction: row;
+    justify-content: center;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.block-mode .icon-mode{
+    background-color: #43414490;
+    display: flex;
+    align-items: center;
+    padding: .35rem .25rem .25rem .25rem;
+    font-size: 1.3rem;
+}
+
+.block-mode .name-mode{
+    background-color: #27282B80;
+}
+
+.block-mode .time-mode{
+    background-color: #27282B50;
+}
+
+.block-mode .name-mode, .block-mode .time-mode{
+    padding: .4rem .3rem;
+    font-size: .7rem;
+}
+
+
+
+
+
 
 
 

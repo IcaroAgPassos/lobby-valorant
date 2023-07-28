@@ -4,7 +4,7 @@ function openMenu(){
 }
 
 function closeMenu(){
-    document.getElementById('menuRight').style.right = ('-9.8rem');
+    document.getElementById('menuRight').style.right = ('-10.1rem');
     document.getElementById('btnMenu').style.right = ('3.5rem');
 }
 
