@@ -21,6 +21,18 @@ document.addEventListener('click', function(event){
     }
 })
 
+//case para confirmar se o usuário está online, ausente, jogando ou conectado(a).
+
+function perfilMode(){
+        const perfilActivityArray = document.querySelectorAll('.perfil-activity');
+        perfilActivityArray.forEach(cadaElemento => {
+            const conteudoPerfil = cadaElemento.textContent;
+            if (conteudoPerfil = 'disponível'){
+            }
+        })
+}
+
+
 
 
 

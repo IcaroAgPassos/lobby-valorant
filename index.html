@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="script.js"></script>
 </head>
-<body id="corpo">
-    <header class="cabecalho">
+<body id="corpo" onload="perfilMode();">
+<header class="cabecalho">
         <nav class="menu-nav">
             <figure class="logo-left"><img src="https://static.vecteezy.com/system/resources/previews/019/763/186/original/valorant-logo-transparent-free-png.png" alt="logo">VALORANT</figure>
             <div>
@@ -40,7 +40,10 @@
                 <ul class="list-menu-right">
                     <li class="block-list">
                         <img src="https://pbs.twimg.com/media/FCgBgQzXoA0GqeM.jpg" alt="" class="perfil-icon">
-                        <p class="perfil-name">I AM YOKI</p>
+                        <span class="block-text">
+                            <p class="perfil-name">I AM YOKI</p>
+                            <p class="perfil-activity">disponível</p>
+                        </span>
                     </li>
                     <li class="block-drop drop-box">
                         <p class="drop-number">1</p>
@@ -49,7 +52,10 @@
                     </li>
                     <li class="block-list">
                         <img src="https://portalzoe.com.br/wp-content/webp-express/webp-images/uploads/2023/04/7bcd58d2dd12880684a9bc544a8f03f5.jpg.webp" alt="" class="perfil-icon">
-                        <p class="perfil-name">Pafly</p>
+                        <span class="block-text">
+                            <p class="perfil-name">Pafly</p>
+                            <p class="perfil-activity" id="emJogo">competitivo</p>
+                        </span>
                     </li>
                     <li class="block-drop drop-box">
                         <p class="drop-number">4</p>
@@ -58,19 +64,31 @@
                     </li>
                     <li class="block-list">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/1200px-LoL_icon.svg.png" alt="" class="perfil-icon">
-                        <p class="perfil-name">CRiS</p>
+                        <span class="block-text">
+                            <p class="perfil-name">CRiS</p>
+                            <p class="perfil-activity" id="conectado">conectado<span>(a)</span></p>
+                        </span>
                     </li>
                     <li class="block-list">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/1200px-LoL_icon.svg.png" alt="" class="perfil-icon">
-                        <p class="perfil-name">Kristofferson</p>
+                        <span class="block-text">
+                            <p class="perfil-name">Kristofferson</p>
+                            <p class="perfil-activity" id="emJogo">em jogo</p>
+                        </span>
                     </li>
                     <li class="block-list">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/1200px-LoL_icon.svg.png" alt="" class="perfil-icon">
-                        <p class="perfil-name">Deadeye</p>
+                        <span class="block-text">
+                            <p class="perfil-name">Deadeye</p>
+                            <p class="perfil-activity" id="ausente">ausente</p>
+                        </span>
                     </li>
                     <li class="block-list">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/1200px-LoL_icon.svg.png" alt="" class="perfil-icon">
-                        <p class="perfil-name">lpaiv</p>
+                        <span class="block-text">
+                            <p class="perfil-name">lpaiv</p>
+                            <p class="perfil-activity" id="ausente">ausente</p>
+                        </span>
                     </li>
                     <li class="block-drop drop-box">
                         <p class="drop-number">76</p>
