@@ -238,6 +238,25 @@ html, body{
     text-transform: capitalize;
 }
 
+.perfil-activity::before{
+    position: absolute;
+    content: ' \25CF';
+    font-size: 1rem;
+    z-index: 5;
+    color: var(--online-color);
+    transform: translateX(-1.2rem) translateY(-.2rem);
+    text-shadow: 
+             -1px -1px 0px #FFF, 
+             -1px 1px 0px #FFF,                    
+              1px -1px 0px #FFF,                  
+              1px 1px 0px #FFF;
+}
+
+/* .block-list.status-online .perfil-activity{
+    content: 'online';
+    color: #589C91;
+} */
+
 .conectado{
     color: #589C91;
 }
@@ -265,20 +284,6 @@ html, body{
     font-size: .8rem;
     font-weight: 500;
     font-family: 'InriaSans Regular';
-}
-
-.perfil-name::before{
-    position: absolute;
-    content: ' \25CF';
-    font-size: 1rem;
-    z-index: 5;
-    color: var(--online-color);
-    transform: translateX(-1.2rem) translateY(.8rem);
-    text-shadow: 
-             -1px -1px 0px #FFF, 
-             -1px 1px 0px #FFF,                    
-              1px -1px 0px #FFF,                  
-              1px 1px 0px #FFF;
 }
 
 .drop-name{
@@ -317,6 +322,7 @@ html, body{
     justify-content: center;
     align-items: center;
     background-color: #23232390;
+    backdrop-filter: blur(3px);
 }
 
 .section-options:target{
@@ -377,7 +383,7 @@ html, body{
     transition: border .2s;
 }
 
-.menu-options .block-menu-options:hover{
+.menu-options .block-menu-options:hover, .section-panel .block-panel:hover{
     border: .20rem solid #EAEEB2;
 }
 
@@ -441,7 +447,7 @@ html, body{
     height: 3rem;
     border: .18rem solid #7D7D80;
     box-sizing: border-box;
-    transition: transform .2s;
+    transition: transform .2s, border .2s; 
     background: var(--block-panel-fundo);
     justify-content: space-between;
     align-items: center;
@@ -514,7 +520,7 @@ html, body{
 }
 
 .section-panel .highlights:hover, .section-panel .slider:hover, .section-panel .block-panel:hover, .section-panel .block-highlights-mode:hover{
-    transform: scale(1.01);
+    transform: scale(1.003);
 }
 
 

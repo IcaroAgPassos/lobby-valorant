@@ -24,13 +24,32 @@ document.addEventListener('click', function(event){
 //case para confirmar se o usuário está online, ausente, jogando ou conectado(a).
 
 function perfilMode(){
-        const perfilActivityArray = document.querySelectorAll('.perfil-activity');
-        perfilActivityArray.forEach(cadaElemento => {
-            const conteudoPerfil = cadaElemento.textContent;
-            if (conteudoPerfil = 'disponível'){
-            }
-        })
+    // const perfilActivityArray = document.querySelectorAll('.perfil-activity');
+
+    // perfilActivityArray.forEach(cadaElemento => {
+    //     const conteudoPerfil = cadaElemento.textContent;
+    //     if  (conteudoPerfil === 'disponível' || conteudoPerfil === 'conectado(a)'){
+    //     }
+    // })
+
+    //infelizmente não achei solução pra isso aqui </3
+
+    // VOLTAMOS PARA OS TESTES NOVAMENTE
+    
+    const perfilActivityArray = document.querySelectorAll('.perfil-activity');
+    perfilActivityArray.forEach(cadaActivity => {
+        const status = cadaActivity.textContent;
+
+        if (status === 'disponível' || status === 'conectado (a)') {
+            cadaActivity.classList.add('conectado')
+        } if (status === 'ausente'){
+            cadaActivity.classList.add('ausente')
+        } if (status === 'em jogo' || status === 'competitivo'){
+            cadaActivity.classList.add('em-jogo')
+        }
+    })
 }
+
 
 
 
