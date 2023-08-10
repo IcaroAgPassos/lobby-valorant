@@ -465,6 +465,7 @@ html, body{
     width: 15rem;
     text-align: center;
     background-color: #73767B;
+    transition: width .2s;
 }
 
 .section-panel .block-highlights-mode{
@@ -519,10 +520,13 @@ html, body{
     font-size: .7rem;
 }
 
-.section-panel .highlights:hover, .section-panel .slider:hover, .section-panel .block-panel:hover, .section-panel .block-highlights-mode:hover{
+.section-panel .highlights:hover, .section-panel .slider:hover, .section-panel .block-highlights-mode:hover{
     transform: scale(1.003);
 }
 
+.section-panel .block-panel:hover .version-panel{
+    width: 14.6rem;
+}
 
 
 
